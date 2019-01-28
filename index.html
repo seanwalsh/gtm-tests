@@ -20,11 +20,15 @@
 
   	<a href="page.html" data-gtmlink="nav-link" data-gtmcat="nav" data-gtmact="click" data-gtmlabel="page" data-gtmvalue="secondary page">page link</a>
   	<a id="anchor" href="#" data-gtmlink="nav-link" data-gtmcat="nav" data-gtmact="click" data-gtmlabel="internal" data-gtmvalue="hash link">hash link</a>
-  	
+  	<a id="anchorTwo" href="#">test</a>
   	
   	<script>
     document.getElementById("anchor").addEventListener("click", function(event){
       event.preventDefault()
+    });
+    document.getElementById("anchorTwo").addEventListener("click", function(event){
+      event.preventDefault()
+      ga('send', 'event', 'test', 'click', 'this is a test');
     });
     </script>
   	
